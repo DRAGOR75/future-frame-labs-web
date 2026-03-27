@@ -9,14 +9,16 @@ export default function Footer() {
       <div className="absolute top-0 left-0 w-full h-4 bg-[var(--color-ffl-pink)]"></div>
       
       <div className="max-w-4xl mx-auto flex flex-col items-center justify-center">
-        <Link href="/" className="mb-6 hover:-translate-y-2 transition-transform cursor-pointer inline-block">
-          <Image 
-            src="/ffl_logo_final.png" 
-            alt="Future Frame Labs Logo" 
-            width={180} 
-            height={112} 
-            className="neo-brutal object-cover bg-white"
-          />
+        <Link href="/" className="mb-10 hover:-translate-y-2 transition-transform cursor-pointer inline-block">
+          <div className="bg-white border-4 border-black p-2 shadow-[8px_8px_0_rgba(0,0,0,1)] hover:shadow-[12px_12px_0_#000] transform rotate-1">
+            <Image 
+              src="/ffl_logo_final.png" 
+              alt="Future Frame Labs Logo" 
+              width={180} 
+              height={112} 
+              className="object-contain"
+            />
+          </div>
         </Link>
         <p className="text-xl md:text-2xl mb-12 font-medium max-w-lg">
           Future Frame Labs. <br/>
