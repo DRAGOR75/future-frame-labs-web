@@ -26,8 +26,8 @@ export default function ContactPage() {
           className="high-impact bg-white p-8 md:p-12 text-black"
         >
           <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight">Let's <span className="text-[var(--color-ffl-pink)]">Talk</span></h1>
-            <p className="text-xl font-bold text-zinc-600">No boring forms. We promise.</p>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black mb-4 tracking-tight">Let's <span className="text-[var(--color-ffl-pink)]">Talk</span></h1>
+            <p className="text-lg md:text-xl font-bold text-zinc-600">No boring forms. We promise.</p>
           </div>
 
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -61,7 +61,7 @@ export default function ContactPage() {
             <motion.button 
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-full impact-button py-5 text-2xl bg-[var(--color-ffl-purple)] text-white mt-8 uppercase tracking-widest"
+              className="w-full impact-button py-4 md:py-5 text-xl md:text-2xl bg-[var(--color-ffl-purple)] text-white mt-6 md:mt-8 uppercase tracking-widest"
             >
               Send It 🔥
             </motion.button>

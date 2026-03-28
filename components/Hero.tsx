@@ -43,7 +43,7 @@ export default function Hero() {
             hidden: {},
             visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } }
           }}
-          className="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tight text-black dark:text-white"
+          className="text-4xl sm:text-6xl md:text-8xl font-black mb-6 md:mb-8 leading-tight tracking-tight text-black dark:text-white"
         >
           {["We", "build"].map((word, i) => (
             <motion.span key={i} variants={{ hidden: { y: 60, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { type: "spring", bounce: 0.4 } } }} className="inline-block mr-4 md:mr-6">
@@ -65,7 +65,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium"
+          className="text-lg md:text-2xl mb-8 md:mb-12 max-w-2xl mx-auto font-medium"
         >
           Expert digital marketing, scalable ad campaigns, and wildly beautiful websites that convert like crazy.
         </motion.p>
@@ -76,10 +76,10 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
-          <a href="#services" className="impact-button text-xl px-10 py-5 bg-[var(--color-ffl-pink)] text-white hover:-translate-y-1 hover:scale-105 hover:bg-[var(--color-ffl-purple)] transition-all">
+          <a href="#services" className="impact-button text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 bg-[var(--color-ffl-pink)] text-white hover:-translate-y-1 hover:scale-105 hover:bg-[var(--color-ffl-purple)] transition-all">
             See What We Do
           </a>
-          <a href="/contact" className="impact-button text-xl px-10 py-5 bg-white text-black hover:-translate-y-1 hover:scale-105 transition-all">
+          <a href="/contact" className="impact-button text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 bg-white text-black hover:-translate-y-1 hover:scale-105 transition-all">
             Start a Project
           </a>
         </motion.div>

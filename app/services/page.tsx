@@ -17,7 +17,7 @@ export default function ServicesPage() {
         <motion.h1 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-6xl md:text-8xl font-black mb-16 text-center high-impact inline-block px-10 py-6 bg-white transform rotate-2"
+          className="text-4xl sm:text-6xl md:text-8xl font-black mb-12 md:mb-16 text-center high-impact inline-block px-6 md:px-10 py-4 md:py-6 bg-white transform rotate-2"
         >
           Our <span className="text-[var(--color-ffl-pink)]">Services</span>.
         </motion.h1>
@@ -40,8 +40,8 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
                 className="w-full md:w-1/2 p-8 high-impact bg-white"
               >
-                <h2 className="text-5xl font-black mb-6 tracking-tight text-black">{svc.title}</h2>
-                <p className="text-2xl font-medium mb-8 text-zinc-700 leading-relaxed">{svc.detail}</p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 md:mb-6 tracking-tight text-black">{svc.title}</h2>
+                <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 md:mb-8 text-zinc-700 leading-relaxed">{svc.detail}</p>
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

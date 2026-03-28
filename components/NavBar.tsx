@@ -57,7 +57,7 @@ export default function NavBar() {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[var(--color-ffl-pink)] flex flex-col items-center justify-center gap-6 p-6"
+            className="fixed inset-0 z-40 bg-[var(--color-ffl-pink)] flex flex-col items-center justify-center gap-6 p-6 overflow-y-auto pt-24"
           >
             <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-white w-full py-6 transform -rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
               <span className="text-black">Home</span>

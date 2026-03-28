@@ -23,16 +23,16 @@ export default function AboutPage() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", bounce: 0.5 }}
-          className="text-6xl md:text-8xl font-black mb-10 leading-none tracking-tighter text-center"
+          className="text-4xl sm:text-6xl md:text-8xl font-black mb-6 md:mb-8 leading-tight tracking-tight text-center"
         >
-          We Are <br/> <span className="text-[var(--color-ffl-purple)] high-impact bg-[var(--color-ffl-purple-light)] px-4 pb-2 mt-4 inline-block">Future Frame Labs</span>
+          We are <br/> <span className="text-zinc-900 bg-white px-4 md:px-6 high-impact inline-block mt-4 transform -rotate-2">Future Frame.</span>
         </motion.h1>
 
         <motion.div 
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="high-impact bg-[var(--color-ffl-pink)] text-white p-8 md:p-12 mb-16 text-2xl font-bold leading-relaxed transform rotate-1"
+          className="high-impact bg-[var(--color-ffl-pink)] text-white p-6 md:p-10 mb-16 text-xl md:text-2xl font-bold leading-relaxed transform rotate-1"
         >
           <p>
             Started by a team of rebellious creatives and data nerds, Future Frame Labs was built on a simple premise: Most brands are boring. We fix that.

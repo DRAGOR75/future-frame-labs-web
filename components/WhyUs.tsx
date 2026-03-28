@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 export default function WhyUs() {
   return (
-    <section className="py-32 px-6 bg-white text-black relative">
+    <section className="py-20 px-6 bg-white text-black relative">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="high-impact bg-[var(--color-ffl-purple-light)] p-8 md:p-16 transform -rotate-1 shadow-[12px_12px_0_#000]"
+          className="high-impact bg-[var(--color-ffl-purple-light)] p-6 md:p-12 transform -rotate-1 shadow-[8px_8px_0_#000]"
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
-            Stop blending in. <br/> <span className="text-[var(--color-ffl-purple)] bg-white px-4 high-impact inline-block mt-4 transform rotate-2">Stand out.</span>
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
+            Stop blending in. <br/> <span className="text-[var(--color-ffl-purple)] bg-white px-3 md:px-4 high-impact inline-block mt-3 md:mt-4 transform rotate-2">Stand out.</span>
           </h2>
-          <div className="text-xl md:text-2xl font-medium space-y-6 max-w-3xl text-zinc-900">
+          <div className="text-lg md:text-xl font-medium space-y-6 max-w-3xl text-zinc-900">
             <p>The digital space is incredibly noisy. If your brand looks and sounds exactly like everyone else, you're completely invisible.</p>
             <p>At Future Frame Labs, we combine vibrant, high-engagement aesthetics with relentless, data-driven performance. We don't just make you look good—we make you impossible to ignore and incredibly profitable.</p>
           </div>

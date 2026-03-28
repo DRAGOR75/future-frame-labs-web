@@ -77,11 +77,11 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black mb-8 high-impact inline-block px-8 py-4 bg-[var(--color-ffl-purple-light)] text-zinc-900 transform -rotate-1"
+            className="text-4xl sm:text-6xl md:text-7xl font-black mb-6 md:mb-8 high-impact inline-block px-6 md:px-8 py-3 md:py-4 bg-[var(--color-ffl-purple-light)] text-zinc-900 transform -rotate-1"
           >
             Our Arsenal
           </motion.h2>
-          <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto text-zinc-300">
+          <p className="text-lg md:text-2xl font-medium max-w-3xl mx-auto text-zinc-300 px-4 md:px-0">
             We don't just do one thing. We provide an entire ecosystem of growth for your brand. Stop settling for less.
           </p>
         </div>
@@ -94,9 +94,9 @@ export default function Services() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className={`service-card high-impact ${svc.color} ${svc.textColor} p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center`}
+              className={`service-card high-impact ${svc.color} ${svc.textColor} p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-center`}
             >
-              <div className="w-48 h-48 flex-shrink-0 high-impact overflow-hidden border-4 border-black group relative">
+              <div className="w-32 h-32 md:w-48 md:h-48 flex-shrink-0 high-impact overflow-hidden border-4 border-black group relative">
                 <Image src={svc.img} alt={svc.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
               <div className="flex flex-col h-full flex-grow">
