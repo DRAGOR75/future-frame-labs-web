@@ -32,10 +32,10 @@ export default function NavBar() {
           <Link href="/about" className="hover:text-[var(--color-ffl-pink)] transition-colors px-2">
             About
           </Link>
-          <Link href="/services" className="neo-brutal-btn px-4 md:px-6 py-2 bg-[var(--color-ffl-purple-light)] text-zinc-900 border-black shadow-[4px_4px_0px_#171717]">
+          <Link href="/services" className="impact-button px-4 md:px-6 py-2 bg-[var(--color-ffl-purple-light)] text-zinc-900 border-black shadow-[4px_4px_0px_#171717]">
             Services
           </Link>
-          <Link href="/contact" className="neo-brutal-btn px-4 md:px-6 py-2 bg-[var(--color-ffl-pink)] text-white border-black shadow-[4px_4px_0px_#171717]">
+          <Link href="/contact" className="impact-button px-4 md:px-6 py-2 bg-[var(--color-ffl-pink)] text-white border-black shadow-[4px_4px_0px_#171717]">
             Let's Talk
           </Link>
         </div>
@@ -43,7 +43,7 @@ export default function NavBar() {
         {/* Mobile menu toggle */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden neo-brutal-btn p-3 bg-white text-black relative z-50 border-[3px] shadow-[3px_3px_0px_#171717]"
+          className="md:hidden impact-button p-3 bg-white text-black relative z-50 border-[3px] shadow-[3px_3px_0px_#171717]"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -59,16 +59,16 @@ export default function NavBar() {
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
             className="fixed inset-0 z-40 bg-[var(--color-ffl-pink)] flex flex-col items-center justify-center gap-6 p-6"
           >
-            <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl font-black neo-brutal-btn bg-white w-full py-6 transform -rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
+            <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-white w-full py-6 transform -rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
               Home
             </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="text-3xl font-black neo-brutal-btn bg-[var(--color-ffl-purple-light)] text-black w-full py-6 transform rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
+            <Link href="/about" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-[var(--color-ffl-purple-light)] text-black w-full py-6 transform rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
               About
             </Link>
-            <Link href="/services" onClick={() => setIsOpen(false)} className="text-3xl font-black neo-brutal-btn bg-white w-full py-6 transform -rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
+            <Link href="/services" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-white w-full py-6 transform -rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
               Services
             </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="text-3xl font-black neo-brutal-btn bg-[var(--color-ffl-purple)] text-white w-full py-6 transform rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-[var(--color-ffl-purple)] text-white w-full py-6 transform rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
               Contact
             </Link>
           </motion.div>

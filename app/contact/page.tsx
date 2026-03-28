@@ -23,7 +23,7 @@ export default function ContactPage() {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="neo-brutal bg-white p-8 md:p-12 text-black"
+          className="high-impact bg-white p-8 md:p-12 text-black"
         >
           <div className="text-center mb-10">
             <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight">Let's <span className="text-[var(--color-ffl-pink)]">Talk</span></h1>
@@ -36,7 +36,7 @@ export default function ContactPage() {
               <input 
                 type="text" 
                 placeholder="Your Name" 
-                className="w-full neo-brutal p-4 bg-[var(--color-ffl-purple-light)] text-xl font-bold placeholder-black/50 focus:outline-none focus:bg-white"
+                className="w-full high-impact p-4 bg-[var(--color-ffl-purple-light)] text-xl font-bold placeholder-black/50 focus:outline-none focus:bg-white"
               />
             </motion.div>
             
@@ -45,7 +45,7 @@ export default function ContactPage() {
               <input 
                 type="email" 
                 placeholder="Email Address" 
-                className="w-full neo-brutal p-4 bg-[var(--color-ffl-pink)] text-white text-xl font-bold placeholder-white/70 focus:outline-none focus:bg-white focus:text-black"
+                className="w-full high-impact p-4 bg-[var(--color-ffl-pink)] text-white text-xl font-bold placeholder-white/70 focus:outline-none focus:bg-white focus:text-black"
               />
             </motion.div>
             
@@ -54,14 +54,14 @@ export default function ContactPage() {
               <textarea 
                 rows={4}
                 placeholder="Tell us about your brand..." 
-                className="w-full neo-brutal p-4 bg-[#fdf2f8] text-xl font-bold placeholder-black/50 focus:outline-none focus:bg-white"
+                className="w-full high-impact p-4 bg-[#fdf2f8] text-xl font-bold placeholder-black/50 focus:outline-none focus:bg-white"
               />
             </motion.div>
 
             <motion.button 
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-full neo-brutal-btn py-5 text-2xl bg-[var(--color-ffl-purple)] text-white mt-8 uppercase tracking-widest"
+              className="w-full impact-button py-5 text-2xl bg-[var(--color-ffl-purple)] text-white mt-8 uppercase tracking-widest"
             >
               Send It 🔥
             </motion.button>

@@ -31,7 +31,7 @@ export default function Hero() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-          className="inline-block mb-6 neo-brutal bg-[var(--color-ffl-purple-light)] text-black px-6 py-2 font-bold transform -rotate-2"
+          className="inline-block mb-6 high-impact bg-[var(--color-ffl-purple-light)] text-black px-6 py-2 font-bold transform -rotate-2"
         >
           Welcome to Future Frame Labs ✨
         </motion.div>
@@ -76,10 +76,10 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
-          <a href="#services" className="neo-brutal-btn text-xl px-10 py-5 bg-[var(--color-ffl-pink)] text-white hover:-translate-y-1 hover:scale-105 hover:bg-[var(--color-ffl-purple)] transition-all">
+          <a href="#services" className="impact-button text-xl px-10 py-5 bg-[var(--color-ffl-pink)] text-white hover:-translate-y-1 hover:scale-105 hover:bg-[var(--color-ffl-purple)] transition-all">
             See What We Do
           </a>
-          <a href="/contact" className="neo-brutal-btn text-xl px-10 py-5 bg-white text-black hover:-translate-y-1 hover:scale-105 transition-all">
+          <a href="/contact" className="impact-button text-xl px-10 py-5 bg-white text-black hover:-translate-y-1 hover:scale-105 transition-all">
             Start a Project
           </a>
         </motion.div>

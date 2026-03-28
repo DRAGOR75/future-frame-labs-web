@@ -3,10 +3,10 @@
 :root {
   --background: #fdf2f8;
   --foreground: #171717;
-  --color-ffl-pink: #FF69B4;
-  --color-ffl-purple-light: #E0B0FF;
-  --color-ffl-purple: #9D4EDD;
-  --color-ffl-purple-dark: #3c096c;
+  --color-ffl-pink: #d81b60; /* Darker Pink: ~6.2:1 contrast with light pink bg, ~4.5:1 with white text? */
+  --color-ffl-purple-light: #f3e5f5; /* Very light purple for backgrounds */
+  --color-ffl-purple: #7b1fa2; /* Darker Purple: ~4.5:1 with white text */
+  --color-ffl-purple-dark: #4a148c;
 }
 
 @theme inline {
@@ -23,9 +23,9 @@
   :root {
     --background: #1e1e2f;
     --foreground: #fdf2f8;
-    --color-ffl-pink: #ff85c6;
-    --color-ffl-purple-light: #caa7eb;
-    --color-ffl-purple: #b373e6;
+    --color-ffl-pink: #ff4081;
+    --color-ffl-purple-light: #e1bee7;
+    --color-ffl-purple: #ab47bc;
   }
 }
 
@@ -36,20 +36,20 @@ body {
   overflow-x: hidden;
 }
 
-/* Neo-Brutalism Utilities */
-.neo-brutal {
+/* High-Impact UI Utilities */
+.high-impact {
   border: 4px solid var(--color-foreground);
   box-shadow: 6px 6px 0px var(--color-foreground);
   border-radius: 1.5rem;
   transition: all 0.2s ease-in-out;
 }
 
-.neo-brutal:hover {
+.high-impact:hover {
   transform: translate(2px, 2px);
   box-shadow: 4px 4px 0px var(--color-foreground);
 }
 
-.neo-brutal-btn {
+.impact-button {
   border: 4px solid var(--color-foreground);
   box-shadow: 4px 4px 0px var(--color-foreground);
   border-radius: 9999px;
@@ -61,12 +61,12 @@ body {
   justify-content: center;
 }
 
-.neo-brutal-btn:hover {
+.impact-button:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px var(--color-foreground);
 }
 
-.neo-brutal-btn:active {
+.impact-button:active {
   transform: translate(4px, 4px);
   box-shadow: 0px 0px 0px var(--color-foreground);
 }
