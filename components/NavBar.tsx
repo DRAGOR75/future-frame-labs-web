@@ -29,7 +29,7 @@ export default function NavBar() {
           </div>
         </Link>
         <div className="hidden md:flex gap-2 md:gap-4 items-center font-bold">
-          <Link href="/about" className="hover:text-[var(--color-ffl-pink)] transition-colors px-2">
+          <Link href="/about" className="impact-button px-4 md:px-6 py-2 bg-white text-zinc-900 border-black shadow-[4px_4px_0px_#171717]">
             About
           </Link>
           <Link href="/services" className="impact-button px-4 md:px-6 py-2 bg-[var(--color-ffl-purple-light)] text-zinc-900 border-black shadow-[4px_4px_0px_#171717]">
@@ -60,16 +60,16 @@ export default function NavBar() {
             className="fixed inset-0 z-40 bg-[var(--color-ffl-pink)] flex flex-col items-center justify-center gap-6 p-6"
           >
             <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-white w-full py-6 transform -rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
-              Home
+              <span className="text-black">Home</span>
             </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-[var(--color-ffl-purple-light)] text-black w-full py-6 transform rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
-              About
+            <Link href="/about" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-[var(--color-ffl-purple-light)] w-full py-6 transform rotate-1 shadow-[5px_5px_0_rgba(0,0,0,1)]">
+              <span className="text-black">About</span>
             </Link>
             <Link href="/services" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-white w-full py-6 transform -rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
-              Services
+              <span className="text-black">Services</span>
             </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-[var(--color-ffl-purple)] text-white w-full py-6 transform rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
-              Contact
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="text-3xl font-black impact-button bg-[var(--color-ffl-purple)] w-full py-6 transform rotate-2 shadow-[5px_5px_0_rgba(0,0,0,1)]">
+              <span className="text-white">Contact</span>
             </Link>
           </motion.div>
         )}
