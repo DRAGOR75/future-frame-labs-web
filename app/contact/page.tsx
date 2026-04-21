@@ -1,8 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+        setErrorMessage(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setStatus("error");
+      setErrorMessage("Network error. Please check your connection.");
+    }
+  };
+
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-[var(--color-ffl-purple-dark)] text-white flex items-center justify-center relative overflow-hidden">
       
@@ -30,12 +74,16 @@ export default function ContactPage() {
             <p className="text-lg md:text-xl font-bold text-zinc-600">No boring forms. We promise.</p>
           </div>
 
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <motion.div whileTap={{ scale: 0.98 }}>
               <label className="block text-xl font-bold mb-2">What do we call you?</label>
               <input 
                 type="text" 
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your Name" 
+                required
                 className="w-full high-impact p-4 bg-[var(--color-ffl-purple-light)] text-xl font-bold placeholder-black/50 focus:outline-none focus:bg-white"
               />
             </motion.div>
@@ -44,7 +92,11 @@ export default function ContactPage() {
               <label className="block text-xl font-bold mb-2">Where can we reach you?</label>
               <input 
                 type="email" 
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Email Address" 
+                required
                 className="w-full high-impact p-4 bg-[var(--color-ffl-pink)] text-white text-xl font-bold placeholder-white/70 focus:outline-none focus:bg-white focus:text-black"
               />
             </motion.div>
@@ -53,18 +105,44 @@ export default function ContactPage() {
               <label className="block text-xl font-bold mb-2">What's the big idea?</label>
               <textarea 
                 rows={4}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Tell us about your brand..." 
+                required
                 className="w-full high-impact p-4 bg-[#fdf2f8] text-xl font-bold placeholder-black/50 focus:outline-none focus:bg-white"
               />
             </motion.div>
 
             <motion.button 
+              type="submit"
+              disabled={status === "loading"}
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-full impact-button py-4 md:py-5 text-xl md:text-2xl bg-[var(--color-ffl-purple)] text-white mt-6 md:mt-8 uppercase tracking-widest"
+              className={`w-full impact-button py-4 md:py-5 text-xl md:text-2xl bg-[var(--color-ffl-purple)] text-white mt-6 md:mt-8 uppercase tracking-widest ${status === "loading" ? "opacity-70 cursor-not-allowed" : ""}`}
             >
-              Send It 🔥
+              {status === "loading" ? "Sending..." : "Send It 🔥"}
             </motion.button>
+
+            {status === "success" && (
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                className="text-green-600 font-bold text-center mt-4"
+              >
+                Success! We'll get back to you soon.
+              </motion.p>
+            )}
+
+            {status === "error" && (
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                className="text-red-500 font-bold text-center mt-4"
+              >
+                {errorMessage}
+              </motion.p>
+            )}
           </form>
         </motion.div>
       </div>
